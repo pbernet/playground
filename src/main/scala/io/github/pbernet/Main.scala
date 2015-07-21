@@ -15,4 +15,5 @@ object Main extends App with Config with Service {
   override protected implicit val materializer: ActorMaterializer = ActorMaterializer()
 
   Http().bindAndHandle(routes, httpInterface, httpPort)
+
 }
