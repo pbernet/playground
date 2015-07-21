@@ -1,0 +1,25 @@
+New log file opened at Tue Jul 21 14:38:14 CEST 2015 by 1106@pauls-MacBook-Pro.local
+Taking next connection to: 51818
+New client attempting to connect on port: 51819-51818
+  Address = /192.168.1.51:51818
+This client on port 51819 has uuid 7f0ea1bf-d2af-46c1-805e-7a8a83c8450c configName activator humanReadableName Activator protocolVersion 3 featureTags Vector()
+Connected Clients: activator-7f0ea1bf-d2af-46c1-805e-7a8a83c8450c
+Taking next connection to: 51818
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 51818
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 51818
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 51818
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 51818
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 51818
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 51818
