@@ -1,2 +1,10 @@
 .idea/
 target/
+target
+*.class
+*.iml
+*.ipr
+*.iws
+.idea
+out
+.DS_Store
