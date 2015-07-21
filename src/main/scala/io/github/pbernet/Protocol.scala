@@ -1,4 +1,4 @@
-package io.github.yeghishe
+package io.github.pbernet
 
 import spray.json.DefaultJsonProtocol
 

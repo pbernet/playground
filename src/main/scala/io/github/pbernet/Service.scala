@@ -1,4 +1,4 @@
-package io.github.yeghishe
+package io.github.pbernet
 
 import akka.http.scaladsl.server.Directives._
 

@@ -1,4 +1,4 @@
-package io.github.yeghishe
+package io.github.pbernet
 
 import akka.event.{ NoLogging, LoggingAdapter }
 import akka.http.scaladsl.testkit.ScalatestRouteTest

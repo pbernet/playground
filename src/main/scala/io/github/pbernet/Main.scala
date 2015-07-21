@@ -1,9 +1,10 @@
-package io.github.yeghishe
+package io.github.pbernet
 
 import akka.actor.ActorSystem
-import akka.event.{ Logging, LoggingAdapter }
+import akka.event.{Logging, LoggingAdapter}
 import akka.http.scaladsl.Http
-import akka.stream.ActorFlowMaterializer
+import akka.stream.ActorMaterializer
+
 import scala.concurrent.ExecutionContext
 
 object Main extends App with Config with Service {
@@ -11,7 +12,7 @@ object Main extends App with Config with Service {
 
   override protected implicit val executor: ExecutionContext = system.dispatcher
   override protected val log: LoggingAdapter = Logging(system, getClass)
-  override protected implicit val materializer: ActorFlowMaterializer = ActorFlowMaterializer()
+  override protected implicit val materializer: ActorMaterializer = ActorMaterializer()
 
   Http().bindAndHandle(routes, httpInterface, httpPort)
 }
