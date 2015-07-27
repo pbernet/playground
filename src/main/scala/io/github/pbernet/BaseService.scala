@@ -1,5 +1,6 @@
 package io.github.pbernet
 
+import akka.actor.ActorSystem
 import akka.event.LoggingAdapter
 import akka.http.scaladsl.marshallers.sprayjson.SprayJsonSupport
 import akka.stream.ActorMaterializer
@@ -9,6 +10,8 @@ trait BaseService extends Protocol with SprayJsonSupport with Config {
   protected implicit def executor: ExecutionContext
 
   protected implicit def materializer: ActorMaterializer
+
+  protected implicit def system: ActorSystem
 
   protected def log: LoggingAdapter
 }

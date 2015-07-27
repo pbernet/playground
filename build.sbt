@@ -3,8 +3,11 @@ import scalariform.formatter.preferences._
 name          := """playground"""
 organization  := "com.github.pbernet"
 version       := "0.0.1"
-scalaVersion  := "2.11.6"
-scalacOptions := Seq("-unchecked", "-feature", "-deprecation", "-encoding", "utf8")
+scalaVersion  := "2.11.7"
+scalacOptions := Seq(
+  "-encoding", "UTF-8", "-target:jvm-1.7", "-deprecation",
+  "-feature", "-unchecked", "-language:implicitConversions", "-language:postfixOps")
+
 
 libraryDependencies ++= {
   val scalazV          = "7.2.0-M2"
@@ -21,7 +24,14 @@ libraryDependencies ++= {
     "org.scalamock"     %% "scalamock-scalatest-support"          % scalaMockV       % "it,test",
     "org.scalaz"        %% "scalaz-scalacheck-binding"            % scalazV          % "it,test",
     "org.typelevel"     %% "scalaz-scalatest"                     % scalazScalaTestV % "it,test",
-    "com.typesafe.akka" %% "akka-http-testkit-experimental"       % akkaStreamV      % "it,test"
+    "com.typesafe.akka" %% "akka-http-testkit-experimental"       % akkaStreamV      % "it,test",
+
+    //needed for XHTML in HTTP Response
+    "com.typesafe.akka" %% "akka-http-xml-experimental"           % akkaStreamV,
+
+    //needed for experimental ScalaTest/Gatling integration for REST API Testing
+    "io.gatling" % "gatling-test-framework" % "2.2.0-SNAPSHOT" % "it, test"
+
   )
 }
 
@@ -30,6 +40,11 @@ Defaults.itSettings
 scalariformSettings
 Revolver.settings
 enablePlugins(JavaAppPackaging)
+enablePlugins(GatlingPlugin)
+
+//needed for experimental ScalaTest/Gatling integration for REST API Testing
+resolvers +=
+  "Sonatype OSS Snapshots" at "https://oss.sonatype.org/content/repositories/snapshots"
 
 ScalariformKeys.preferences := ScalariformKeys.preferences.value
   .setPreference(AlignSingleLineCaseStatements, true)
