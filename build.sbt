@@ -30,7 +30,7 @@ libraryDependencies ++= {
     "com.typesafe.akka" %% "akka-http-xml-experimental"           % akkaStreamV,
 
     //needed for experimental ScalaTest/Gatling integration for REST API Testing
-    "io.gatling" % "gatling-test-framework" % "2.2.0-SNAPSHOT" % "it, test"
+    "io.gatling" % "gatling-test-framework" % "2.2.0" % "it, test"
 
   )
 }
