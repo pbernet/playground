@@ -16,6 +16,8 @@ import akka.http.scaladsl.marshallers.xml.ScalaXmlSupport._
 import scala.concurrent.Future
 import scala.math._
 
+//Test comment for rebase
+
 case class IpInfo(ip: String, country: Option[String], city: Option[String], latitude: Option[Double], longitude: Option[Double])
 
 case class IpPairSummaryRequest(ip1: String, ip2: String)
