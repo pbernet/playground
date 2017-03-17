@@ -11,3 +11,6 @@ val aIntList = List(1,3,2)
 aIntList.filter(isOddFuncLit)
 aIntList.filter(isOddFunc)
 aIntList.filter(Calculator.isOddMethod)
+
+
+//change for rebase
