@@ -18,3 +18,5 @@ List('a',"b","c").collect{case i:String => i.hashCode(); case i:Char => i.hashCo
 "0123456789".permutations.drop(999999).next
 "012".permutations.mkString(";")
 "012".drop(1).iterator.next()
+
+//anoter change for rebase
